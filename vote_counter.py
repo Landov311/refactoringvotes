@@ -1,5 +1,5 @@
 import csv
-
+#Se renombró varias variables, como el reader, que ahora es data_votaciones, el nombre de la función extra expresa su objetivo, además se creó dos variables extras para confirmar si hay empate
 def count_votes(file_path):
     results = {}
     
@@ -14,9 +14,9 @@ def count_votes(file_path):
             except:
                 votes = 0
             
-            results[candidate] = results.get(candidate, 0) + votes
+            results[candidate] = results.get(candidate, 0) + votes   #reduzco la condicional if a un solo código, de igual manera funciona correctamente.
 
-    print_of_candidates_and_winner(results)
+    print_of_candidates_and_winner(results)   #Extraigo el código que muestra los prints, y lo separo como otra función, con el fin no combinar el conteo con los prints
 
 
 
